@@ -9,8 +9,6 @@ library(tidybayes)
 library(spOccupancy)
 library(tidyverse)
 library(here)
-#library(stars)
-
 
 # Read best models --------------------------------------------------------
 
