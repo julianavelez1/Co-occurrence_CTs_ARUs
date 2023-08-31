@@ -1,5 +1,4 @@
-# 4_covariates_effects.R: # this script plots point estimates and credible     #                           intervals
-#                        
+# 4_covariates_effects.R: this script plots point estimates and credible           #                         intervals
 
 
 rm(list=ls()) 
