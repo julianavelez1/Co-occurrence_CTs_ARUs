@@ -271,6 +271,7 @@ data_dry_rainy_au <- list(y = y_array_au$cams_moths_op,
 save(data_dry_rainy_ct,
      data_dry_rainy_au,
      sp.codes,
-     file = "data/processed_data/data_bundles.rdata")
+     file = here("data", "data_bundles.rdata"))
 
-save(dets_ct_au, op_days_cams_moths, file = "data/output_data/raw_dets/raw_daily_dets.rdata")
+save(dets_ct_au, op_days_cams_moths, 
+     file = here("results", "raw_dets", "raw_daily_dets.rdata"))
