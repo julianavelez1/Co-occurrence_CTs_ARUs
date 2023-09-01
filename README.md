@@ -18,21 +18,21 @@ Here we investigate the association between two measures of disturbance (poachin
   - Input: data/indep_recs.RDS, data/cams_operation_site.RDS, data/moth_operation_site.RDS, data/covariates.RDS
   - Output: data/data_bundles.rdata
 - 2a_sfMsPGOcc.R: fits multi-species spatial occupancy model with species correlations.
-Input: data/indep_recs.RDS
-Output: results/spOccupancy_fits/julian_dry_rainy_spatial
+  - Input: data/indep_recs.RDS
+  - Output: results/spOccupancy_fits/julian_dry_rainy_spatial
 - 2b_lfMsPGOcc.R: fits multi-species non-spatial occupancy model with species correlations. 
-Input: data/indep_recs.RDS
-Output: results/spOccupancy_fits/julian_dry_rainy_nonspatial
+  - Input: data/indep_recs.RDS
+  - Output: results/spOccupancy_fits/julian_dry_rainy_nonspatial
 - 3_waic_convergence: gets WAIC and assesses model convergence. 
-Input: results/spOccupancy_fits
-Output: results/waic/waic_df.RDS, results/best_mods/fits_best_models.RDS
+  - Input: results/spOccupancy_fits
+  - Output: results/waic/waic_df.RDS, results/best_mods/fits_best_models.RDS
 - 4_covariates_effects.R: gets and plots occupancy estimates and covariates effects. 
-Input: results/best_mods/fits_best_models.RDS
-Output: results/estimates, figures/occ_\*.RDS, figures/det_\*.RDS
+  - Input: results/best_mods/fits_best_models.RDS
+  - Output: results/estimates, figures/occ_\*.RDS, figures/det_\*.RDS
 - 5_predictions.R: gets model predictions for the effect of covariates on occupancy probability. 
-Input: data/data_bundles.rdata, results/best_mods/fits_best_models.RDS. 
-Output: figures/marginal_\*.RDS
+  - Input: data/data_bundles.rdata, results/best_mods/fits_best_models.RDS. 
+  - Output: figures/marginal_\*.RDS
 - 6_sp_correlation.R: gets species correlations
-Input: data/data_bundles.rdata, results/best_mods/fits_best_models.RDS
-Output: results/estimates/ci_corr.RDS, figures/corr_*.RDS
+  - Input: data/data_bundles.rdata, results/best_mods/fits_best_models.RDS
+  - Output: results/estimates/ci_corr.RDS, figures/corr_*.RDS
 
