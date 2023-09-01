@@ -15,7 +15,7 @@ source(here("functions", "prep_species_array.R"))
 # Read independent records and operation matrices -----------------------------------
 
 # Independent records
-indep_recs <- readRDS(here("data", "indep_recs.RDS")) # contains independent records of the camera trap survey (1), acoustic survey with audiomoths (2) and pooled records from camera traps and audiomoths (3)
+indep_recs <- readRDS(here("data", "indep_recs.RDS")) # contains independent records of the camera traps (1) and acoustic (2) surveys
 
 # Set unique values (1 and NA) in operation matrices. Rows are sites and columns are operational dates
 
