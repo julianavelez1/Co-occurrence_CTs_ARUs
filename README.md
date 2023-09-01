@@ -9,7 +9,7 @@ Here we investigate the association between two measures of disturbance (poachin
 - cams_operation_site.RDS: camera traps operation matrix
 - covariates.RDS: data frame of site covariates
 - data_bundles.rdata: lists containing detection-nondetection arrays, occupancy and detection covariates and site coordinates.
-- indep_recs.RDS: list containing independent records of the surveys with camera traps (1), acoustic recorders (2) and pooled records from camera traps and acoustic recorders (3)
+- indep_recs.RDS: list containing independent records of the surveys with camera traps (1) and acoustic recorders
 - moth_operation_site.RDS: acoustic recorders operation matrix
 
 ## Programs
