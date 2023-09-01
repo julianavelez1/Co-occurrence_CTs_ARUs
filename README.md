@@ -23,7 +23,7 @@ Here we investigate the association between two measures of disturbance (poachin
 - 2b_lfMsPGOcc.R: fits multi-species non-spatial occupancy model with species correlations. 
   - Input: data/indep_recs.RDS
   - Output: results/spOccupancy_fits/julian_dry_rainy_nonspatial
-- 3_waic_convergence: gets WAIC and assesses model convergence. 
+- 3_waic_convergence.R: gets WAIC and assesses model convergence. 
   - Input: results/spOccupancy_fits
   - Output: results/waic/waic_df.RDS, results/best_mods/fits_best_models.RDS
 - 4_covariates_effects.R: gets and plots occupancy estimates and covariates effects. 
@@ -34,5 +34,5 @@ Here we investigate the association between two measures of disturbance (poachin
   - Output: figures/marginal_\*.RDS
 - 6_sp_correlation.R: gets species correlations
   - Input: data/data_bundles.rdata, results/best_mods/fits_best_models.RDS
-  - Output: results/estimates/ci_corr.RDS, figures/corr_*.RDS
+  - Output: results/estimates/ci_corr.RDS, figures/corr_\*.RDS
 
