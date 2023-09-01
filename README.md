@@ -15,8 +15,8 @@ Here we investigate the association between two measures of disturbance (poachin
 ## Programs
 
 - 1_detection_array.R: creates data bundles to fit JSDMs. 
-Input: data/indep_recs.RDS, data/cams_operation_site.RDS, data/moth_operation_site.RDS, data/covariates.RDS
-Output: data/data_bundles.rdata
+  - Input: data/indep_recs.RDS, data/cams_operation_site.RDS, data/moth_operation_site.RDS, data/covariates.RDS
+  - Output: data/data_bundles.rdata
 - 2a_sfMsPGOcc.R: fits multi-species spatial occupancy model with species correlations.
 Input: data/indep_recs.RDS
 Output: results/spOccupancy_fits/julian_dry_rainy_spatial
