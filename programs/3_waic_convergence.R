@@ -1,7 +1,7 @@
-# 3_waic_convergence.R: this script obtains the Widely Applicable Information 
-#                       Criterion and selects the best-performing model.
-#                       It also performs convergence assessment by inspecting
-#                       traceplots, Rhat values and the effective sample size (ESS).
+# 3_waic_convergence_checks.R: this script obtains the Widely Applicable       
+#                             Information Criterion and selects the 
+#                             best-performing model.
+#                             It also performs convergence assessment (by       #                             inspecting traceplots, Rhat values, and           #                             effective sample sizes) and posterior             #                             predictive checks.
 
 rm(list = ls())
 
@@ -90,8 +90,18 @@ plot(best_mod_au[[1]]$beta.samples, density = FALSE)
 plot(best_mod_au[[1]]$alpha.samples, density = FALSE) 
 plot(best_mod_au[[1]]$lambda.samples, density = FALSE) 
 
-# Save WAIC and best models -----------------------------------------------
+
+# Posterior predictive checks ----------------------------------------------
+
+ppc.out_au <- ppcOcc(best_mods$`julian_dry_rainy_spatial/dry_rainy_au_web`, fit.stat = 'chi-squared', group = 1)
+
+ppc.out_ct <- ppcOcc(best_mods$`julian_dry_rainy_spatial/dry_rainy_ct_web`, fit.stat = 'chi-squared', group = 1)
+
+# Save WAIC, best models, and posterior predictive checks  -----------------------------------------------
 
 #saveRDS(waic_df, file = here("results", "waic", "waic_df.RDS"))
 #saveRDS(best_mods, file = here("results", "best_mods", "fits_best_models.RDS"))
+
+#saveRDS(ppc.out_au, file = here("results", "ppc_out", "ppc_out_au.RDS"))
+#saveRDS(ppc.out_ct, file = here("results", "ppc_out", "ppc_out_ct.RDS"))
 
