@@ -1,4 +1,6 @@
-This repository contains code and data associated with:
+## co-occurrence_CTs_ARUs
+
+This repository contains data, code and results associated with:
 
 Vélez, J., McShea, W., Pukazhenthi, B., Stevenson, P. and J. Fieberg. 2023. Implications of the scale of detection for inferring co-occurrence patterns from paired camera traps and acoustic recorders. *Conservation Biology*.
 
