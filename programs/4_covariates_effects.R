@@ -103,7 +103,7 @@ occ_posterior_water <- beta_samples %>%
   map_at(~.x %>% 
            mutate(Method = "CTs"), .at = "julian_dry_rainy_spatial/dry_rainy_ct_web") %>% 
   bind_rows() %>% 
-  mutate(across(where(is.numeric), round, 1))
+  mutate_if(is.numeric, ~round(., 1))
 
 ci_water <- occ_posterior_water %>% 
   group_by(Species, Method) %>% 
@@ -185,7 +185,7 @@ occ_posterior_edge <- beta_samples %>%
   map_at(~.x %>% 
            mutate(Method = "CTs"), .at = "julian_dry_rainy_spatial/dry_rainy_ct_web") %>% 
   bind_rows() %>% 
-  mutate(across(where(is.numeric), round, 1))
+  mutate_if(is.numeric, ~round(., 1))
 
 ci_edge <- occ_posterior_edge %>% 
   group_by(Species, Method) %>% median_qi(Estimates, .width = 0.89)
@@ -258,7 +258,7 @@ occ_posterior_ba <- beta_samples %>%
   map_at(~.x %>% 
            mutate(Method = "CTs"), .at = "julian_dry_rainy_spatial/dry_rainy_ct_web") %>% 
   bind_rows() %>% 
-  mutate(across(where(is.numeric), round, 1))
+  mutate_if(is.numeric, ~round(., 1))
 
 ci_ba_occ <- occ_posterior_ba %>% 
   group_by(Species, Method) %>% median_qi(Estimates, .width = 0.89)
@@ -338,7 +338,7 @@ det_posterior_shrubs <- alpha_samples %>%
   map_at(~.x %>% 
            mutate(Method = "CTs"), .at = "julian_dry_rainy_spatial/dry_rainy_ct_web") %>% 
   bind_rows() %>% 
-  mutate(across(where(is.numeric), round, 1))
+  mutate_if(is.numeric, ~round(., 1))
 
 ci_shrubs <- det_posterior_shrubs %>% 
   group_by(Species, Method) %>% median_qi(Estimates, .width = 0.89)
@@ -416,7 +416,7 @@ det_posterior_ba <- alpha_samples %>%
   map_at(~.x %>% 
            mutate(Method = "CTs"), .at = "julian_dry_rainy_spatial/dry_rainy_ct_web") %>% 
   bind_rows() %>% 
-  mutate(across(where(is.numeric), round, 1))
+  mutate_if(is.numeric, ~round(., 1))
 
 ci_ba_det <- det_posterior_ba %>% 
   group_by(Species, Method) %>% median_qi(Estimates, .width = 0.89)
