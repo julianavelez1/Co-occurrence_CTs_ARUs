@@ -4,7 +4,7 @@ This repository contains data, code and results associated with:
 
 Vélez, J., McShea, W., Pukazhenthi, B., Stevenson, P. and J. Fieberg. 2023. Implications of the scale of detection for inferring co-occurrence patterns from paired camera traps and acoustic recorders. *Conservation Biology*.
 
-The objective of this study was to investigate the association between two measures of disturbance (poaching and livestock) and wild ungulates using data collected using camera traps and autonomous acoustic recording units. We quantified these associations using joint species distribution models (JSDMs) fit to data collected in multifunctional landscapes of the Orinoquía region of Colombia. We also evaluated the effect of the detection scale of camera traps and acoustic recorders for inferring co-occurrence patterns between wildlife and disturbance factors.
+The objective of this study was to investigate the association between two measures of disturbance (poaching and livestock) and wild ungulates using data collected with camera traps and autonomous acoustic recording units. We quantified these associations using joint species distribution models (JSDMs) fit to data from multifunctional landscapes of the Orinoquía region of Colombia. We also evaluated the effect of the detection scale of camera traps and acoustic recorders for inferring co-occurrence patterns between wildlife and disturbance factors.
 
 ## Data
 
