@@ -78,7 +78,7 @@ corr_dist_plots_density <- corr_pairwise %>%
         mutate(Corr = signif(x = Corr, digits = 2)) %>% 
   ggplot(aes(x = Corr)) +
   geom_density(aes(fill=factor(Model)), 
-               size = 0.2, 
+               linewidth = 0.2, 
                alpha = 0.4) + 
   labs(x = 'Correlation', y = 'Density', 
        title = .x$Species) +
