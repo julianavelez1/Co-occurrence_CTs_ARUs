@@ -5,7 +5,6 @@
 
 rm(list=ls()) 
 
-library(purrr)
 library(tidyverse)
 library(here)
 library(Matrix)
