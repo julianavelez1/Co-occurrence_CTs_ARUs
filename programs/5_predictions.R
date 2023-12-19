@@ -74,10 +74,10 @@ get_preds <- function(path_to_model = "/Volumes/NO NAME/dry_rainy_au_we-4-chain-
   colnames(test$psi.0.samples) <- sp.codes
   
   test_mean <- t(apply(test$psi.0.samples, 2:3, mean))
-  test_q0.025 <- t(apply(test$psi.0.samples, 2:3, quantile, 0.025))
-  test_q0.975 <- t(apply(test$psi.0.samples, 2:3, quantile, 0.975))
+  test_q0.055 <- t(apply(test$psi.0.samples, 2:3, quantile, 0.055))
+  test_q0.945 <- t(apply(test$psi.0.samples, 2:3, quantile, 0.945))
 
-  pred_summary <- do.call(cbind, list(data.frame(covariate = covariate_unscaled, test_mean) %>% gather(Species, psi_mean, -covariate), data.frame(test_q0.025) %>% gather(Species, psi_lwr) %>% dplyr::select(-Species), data.frame(test_q0.975) %>% gather(Species, psi_upr) %>% dplyr::select(-Species)))
+  pred_summary <- do.call(cbind, list(data.frame(covariate = covariate_unscaled, test_mean) %>% gather(Species, psi_mean, -covariate), data.frame(test_q0.055) %>% gather(Species, psi_lwr) %>% dplyr::select(-Species), data.frame(test_q0.945) %>% gather(Species, psi_upr) %>% dplyr::select(-Species)))
   
 return(pred_summary)
   
