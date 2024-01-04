@@ -16,11 +16,11 @@ get.corr.spOcc <- function(fit = out, N.spp, n.factors) {
 
   corr_p50 <- apply(corr_array, 1:2, median)
   
-  corr_p025 <- apply(corr_array, 1:2, quantile, 0.025)
+  corr_p055 <- apply(corr_array, 1:2, quantile, 0.055)
   
-  corr_p975 <- apply(corr_array, 1:2, quantile, 0.975)
+  corr_p945 <- apply(corr_array, 1:2, quantile, 0.945)
   
-  corr_p50_sig <- corr_p50 * !(apply(corr_p025, 2, function(x) x < 0) & apply(corr_p975, 2, function(x) x > 0))
+  corr_p50_sig <- corr_p50 * !(apply(corr_p055, 2, function(x) x < 0) & apply(corr_p945, 2, function(x) x > 0))
   
   return(list(correlation_array = corr_array, median_correlation_sig = corr_p50_sig))
 }
