@@ -1,4 +1,4 @@
-# 4_covariates_effects.R: this script plots point estimates and credible           #                         intervals
+# 4_covariates_effects.R: this script plots point estimates and credible intervals        
 
 
 rm(list=ls()) 
@@ -12,6 +12,8 @@ library(here)
 # Read best models --------------------------------------------------------
 
 best_mods <- readRDS(here("results", "best_mods", "fits_best_models.RDS"))
+
+summary(best_mods$`julian_dry_rainy_spatial/dry_rainy_au_web`)
 
 
 # Species names -----------------------------------------------------------
