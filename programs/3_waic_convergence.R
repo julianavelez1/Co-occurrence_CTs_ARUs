@@ -1,7 +1,7 @@
 # 3_waic_convergence_checks.R: this script obtains the Widely Applicable       
 #                             Information Criterion and selects the 
-#                             best-performing model.
-#                             It also performs convergence assessment (by       #                             inspecting traceplots, Rhat values, and           #                             effective sample sizes) and posterior             #                             predictive checks.
+#                             best-performing model. It also performs convergence
+#                             assessment and posterior predictive checks.
 
 rm(list = ls())
 
