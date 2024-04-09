@@ -33,10 +33,6 @@ source(here("functions", "get_correlations_spOcc.R"))
 N <- 7 # number of species
 n.factors <- 2
 
-
-mod_obj <- list(dry_rainy_web_ct, dry_rainy_web_au)
-
-
 mod_list <- list(dry_rainy_web_ct, dry_rainy_web_au) 
 
 corr_array_list <- lapply(mod_list, function(x) get.corr.spOcc(x, N, n.factors)$correlation_array) #first argument is model object from spOccupancy, second arg is number of species, third arg is number of latent variables
